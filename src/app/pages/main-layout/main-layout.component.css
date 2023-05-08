@@ -1,0 +1,11 @@
+* {
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1 {
+  background-image: linear-gradient(pink, rgb(184, 184, 213), skyblue);
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}

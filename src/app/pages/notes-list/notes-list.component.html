@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<p>My Notes</p>
+
+<body>
+  <div *ngFor="let note of notesData; let i = index" class="noteTemplate">
+    <div
+      class="titleContent"
+      [routerLink]="[
+        '/update',
+        { title: note.title, content: note.content, index: i }
+      ]"
+    >
+      <div class="noteTitle">{{ note.title }}</div>
+      <div class="noteContent">{{ note.content }}</div>
+    </div>
+    <button class="removeBtn" (click)="removeBtn(note)">X</button>
+  </div>
+  <button type="button" [routerLink]="['/add-note']" class="addButton">
+    Add Note
+  </button>
+</body>

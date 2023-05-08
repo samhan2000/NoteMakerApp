@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <p>Update Note</p>
+
+    <div class="container">
+      <form
+        (ngSubmit)="submitForm(updateForm)"
+        #updateForm="ngForm"
+        id="noteForm"
+      >
+        <label class="label" for="noteTitle">Title</label> &nbsp;
+        <br />
+        <input
+          type="text"
+          [(ngModel)]="title"
+          title="noteContent"
+          name="noteContent"
+          value="{{ title }}"
+        />
+
+        <br />
+        <label class="label" for="noteContent">Content</label>
+        <br />
+        <textarea
+          title="noteTitle"
+          name="noteTitle"
+          rows="10"
+          [(ngModel)]="content"
+          >{{ content }} </textarea
+        >
+        <br />
+        <input type="submit" id="submit" value="Update" />
+      </form>
+    </div>
+  </body>
+</html>

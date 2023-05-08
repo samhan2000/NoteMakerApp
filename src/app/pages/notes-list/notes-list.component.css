@@ -1,0 +1,103 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  width: 70%;
+  margin: 0 auto !important;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 60px;
+  font-size: 25px;
+}
+
+/* .container {
+  border: 2px solid rgba(160, 157, 157, 0.05);
+  padding: 20px 0px;
+} */
+
+.noteTemplate {
+  height: 50px;
+  width: 80%;
+  border: 1px solid rgb(118, 117, 117);
+  padding: 5px 0px;
+  text-align: left;
+  margin: 0 auto;
+  overflow-y: hidden;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px rgb(147, 144, 144);
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.408);
+}
+
+.noteTemplate:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px rgb(249, 195, 204);
+}
+
+.noteTitle {
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.148);
+}
+
+.noteContent {
+  clear: both;
+  font-size: 15px;
+  padding: 5px 0px;
+  margin-right: 0px;
+  /* font-weight: bold; */
+}
+
+.titleContent {
+  width: 90%;
+}
+
+.addButton {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-top: 30px;
+  /* width: 200px; */
+  /* background-image: linear-gradient(pink, rgb(184, 184, 213), skyblue); */
+  background-color: #d5b4b4;
+  cursor: pointer;
+  font-family: "MyFont";
+  /* font-weight: bold; */
+  border: 1px solid black;
+}
+
+.addButton:hover {
+  /* box-shadow: 0 0 10px rgb(249, 191, 200); */
+  box-shadow: 0 0 20px #d5b4b4;
+}
+
+.removeBtn {
+  margin: 0 auto;
+  height: 100%;
+  width: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  /* background-image: linear-gradient(pink, rgb(184, 184, 213), skyblue); */
+  background-color: #d5b4b4;
+  border: 0px;
+  font-weight: bolder;
+  border-left: 1px solid black;
+  font-size: 11px;
+}
+
+.removeBtn:hover {
+  font-size: 13px;
+  cursor: grabbing;
+}

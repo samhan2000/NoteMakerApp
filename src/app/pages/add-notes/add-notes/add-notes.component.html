@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<body>
+  <p>Add Note</p>
+  <div class="container">
+    <form
+      (ngSubmit)="onSubmit(addNoteDetails)"
+      #addNoteDetails="ngForm"
+      id="noteForm"
+    >
+      <label class="label" for="noteTitle">Title</label> &nbsp;
+      <br />
+      <input
+        #addNoteNgModel="ngModel"
+        required
+        minlength="4"
+        type="text"
+        title="noteTitle"
+        name="title"
+        placeholder="It's a Beautiful Day"
+        ngModel
+      />
+
+      <div
+        *ngIf="
+          addNoteNgModel.invalid &&
+          (addNoteNgModel.touched || addNoteNgModel.dirty)
+        "
+        class="alert-div"
+      >
+        <div *ngIf="addNoteNgModel.errors?.['required']">
+          Note Title is required
+        </div>
+        <div *ngIf="addNoteNgModel.errors?.['minlength']">
+          Title must be atleast 4 characters
+        </div>
+      </div>
+
+      <br />
+      <label class="label" for="noteContent">Content</label>
+      <br />
+      <textarea
+        title="noteContent"
+        name="content"
+        rows="10"
+        ngModel
+        placeholder="The sky is blue and the weather is warm."
+      >
+      </textarea>
+      <br />
+      <input
+        type="submit"
+        [disabled]="addNoteDetails.invalid"
+        id="submit"
+        value="Add Note"
+      />
+    </form>
+  </div>
+</body>
